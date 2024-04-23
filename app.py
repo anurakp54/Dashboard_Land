@@ -32,8 +32,8 @@ elif authentication_status == None:
 elif authentication_status:
     #data
     df1 = pd.read_csv('data/messages.csv')  # columns 'User ID', 'User Name', 'stage', 'Message', 'data_date'
-    df2 = pd.read_excel("/Volumes/Extreme 500/PycharmProjects/chatbot/data/2_TEAM.xlsx",sheet_name="data", header=0)
-    df3 = pd.read_excel("/Volumes/Extreme 500/PycharmProjects/chatbot/data/3_TEAM.xlsx",sheet_name="data", header=0)
+    df2 = pd.read_excel("data/2_TEAM.xlsx",sheet_name="data", header=0)
+    df3 = pd.read_excel("data/3_TEAM.xlsx",sheet_name="data", header=0)
     df = pd.concat([df2,df3])
     # Adjust sta 789+900 to keep only the first three sta 789
     df['sta'] = df['sta'].str.slice(stop=3)
